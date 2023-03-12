@@ -2,6 +2,10 @@
     box-sizing: border-box;  
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -46,10 +50,20 @@ body {
 }
 
 /* ============== Header ================ */
-.header {
+.fixed-header {
+    position: sticky;
+    top: -26px;
+    z-index: 999;
+    padding-top: 26px;
+    background-color: #E6F0FF;
+}
+
+.hero-wrap {
     position: relative;
-    height: 100vh;
-    padding: 26px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 90px);
     background-color: #E6F0FF;
 }
 
@@ -86,7 +100,7 @@ body {
 }
 
 .navbar ul li a:hover::after {
-    width: calc(100% - 14px);
+    width: calc(100%);
 }
 
 .navbar .actions {
@@ -112,11 +126,6 @@ body {
 }
 
 /* ============== Hero ================= */
-.hero {
-    display: flex;
-    margin-top: 70px;
-}
-
 .hero .info {
     width: 51%;
 }
@@ -154,10 +163,10 @@ body {
 
 .hero .hero-img {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: calc((100vw - 1110px) / 2 - 50px);
-    width: 493px;
-    height: 528px;
+    width: 496px;
+    height: 510px;
 }
 
 /* Client */
